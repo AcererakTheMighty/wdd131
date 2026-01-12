@@ -36,3 +36,4 @@ selectElem.addEventListener('change', function(){
                 
 const newPara = document.createElement('p');
 newPara.innerText = 'This paragraph was created with JavaScript.';
+document.body.appendChild(newPara);
