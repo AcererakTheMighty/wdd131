@@ -37,3 +37,16 @@ selectElem.addEventListener('change', function(){
 const newPara = document.createElement('p');
 newPara.innerText = 'This paragraph was created with JavaScript.';
 document.body.appendChild(newPara);
+
+const newimage = document.createElement('img');
+newimage.setAttribute('src', 'https://picsum.photos/200');
+document.body.appendChild(newImage);
+
+const newDiv = document.createElement('div');
+newDiv.innerHTML = '<h2>New Div</h2><p>This is a new div added to the body.</p>';
+document.body.appendChild(newDiv);
+
+const section = document.createElement('section');
+section.innerHTML = '<h2>Web Development</h2><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>';
+document.body.appendChild(section);
+
