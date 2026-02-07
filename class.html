@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        .format, h1{
+            text-align: center;
+            font: 2em
+        }
+        hr{
+            width: 300px;
+        }
+        .details{
+            display: inline;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <h1>WDD131 Student List</h1>
+    <div id="student_container"></div>
+    <script>
+        const student = [
+            {
+                last: 'scott',
+                first: 'Esther'
+            }
+            ,{
+                last: 'doe',
+                first: 'john'
+            } 
+            ,{
+                last: 'smith',
+                first: 'landon'
+            }
+        ]
+
+        let container = document.querySelector('#student_container');
+        student.forEach(function(item){
+            let name = document.createElement('div');
+            name.setAttribute('class', 'format')
+            name.textContent = `${item.first} ${item.last}`;
+            container.appendChild(name);
+
+            let html = ''
+            html += `<p class='details'>${item.first}</p>`
+            html += `<p class='details'>${item.last}</p>`
+            html += `<hr>`;
+            name.innerHTML = html;
+            container.appendChild(name);
+        })
+    </script>
+
+    </style>
+    
+</body>
+</html>
