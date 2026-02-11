@@ -84,3 +84,24 @@ const words = ['watermelon', 'peach', 'apple', 'tomato', 'grape'];
 const shortWords = words.filter(function(word){
     return word.length <= 6;
 });
+
+console.log(shortWords);
+
+const classes = [
+    {name: 'Math', students: 30},
+    {name: 'History', students: 25},
+    {name: 'Science', students: 28},
+    {name: 'Art', students: 20}
+]
+
+let container = document.querySelector('#classes');
+
+classes.forEach(function(item){let name = document.createElement('div');
+
+    let html = `<span>${item.name}</span>`;
+
+    name.innerHTML = html;
+    container.appendChild(name);
+
+});
+    
