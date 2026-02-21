@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eaeaea;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.card {
+    background: #ddd;
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,.2);
+    display: grid;
+    gap: 12px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.card-body {
+    display: grid;
+    gap: 10px;
+}
+
+#cardExpiration {
+    display: grid;
+    grid-template-columns: 1fr 60px 60px;
+    gap: 8px;
+    align-items: center;
+}
+
+#cardExpiration label {
+    grid-column: span 3;
+}
+
+.cvc {
+    display: grid;
+    gap: 5px;
+}
+
+input {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+}
