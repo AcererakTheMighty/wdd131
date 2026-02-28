@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swamp Beast Diplomat</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Swamp Beast Diplomat Character Card">
+  <meta property="og:description" content="An interactive character card built with JavaScript objects.">
+  <meta property="og:url" content="https://acererakthemighty.com/charactercard">
+  <meta property="og:image" content="https://acererakthemighty.com/images/swamp-beast.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Swamp Beast Diplomat Character Card">
+  <meta name="twitter:description" content="An interactive character card built with JavaScript objects.">
+  <meta name="twitter:image" content="https://acererakthemighty.com/images/swamp-beast.png">
+
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="card">
+  <img src="img/swamp-beast.png" alt="Swamp Beast Diplomat" class="image">
+
+  <div class="name" id="charName"></div>
+
+  <div class="stats">
+    <p><strong>Class:</strong> <span id="charClass"></span></p>
+    <p><strong>Level:</strong> <span id="charLevel"></span></p>
+    <p><strong>Health:</strong> <span id="charHealth"></span></p>
+  </div>
+
+  <div class="buttons">
+    <button onclick="character.attacked()">Attack</button>
+    <button onclick="character.levelUp()">Level Up</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+/* Code written by me, improved upon by ChatGpt. */
