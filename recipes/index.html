@@ -6,26 +6,8 @@
 
 <title>RecipeBook</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="styles.css">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="RecipeBook">
-<meta property="og:description" content="Find delicious recipes like apple crisp and more.">
-<meta property="og:url" content="https://yourwebsite.com">
-<meta property="og:image" content="images/social-preview-image.png">
-
-<!-- X Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="RecipeBook">
-<meta name="twitter:description" content="Find delicious recipes like apple crisp and more.">
-<meta name="twitter:image" content="images/social-preview-image.png">
-
-<link rel="icon" href="favicon.ico">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
 </head>
 
@@ -37,47 +19,19 @@
 </header>
 
 <section class="search">
-<input type="text" placeholder="Find a recipe">
+<input id="searchInput" type="text" placeholder="Find a recipe">
 <img src="images/search_icon.svg" alt="search icon">
 </section>
 
-<main>
-
-<div class="recipe-card">
-
-<img src="images/apple_crisp.jpg" alt="Apple Crisp">
-
-<div class="recipe-info">
-
-<span class="tag">dessert</span>
-
-<h2>Apple Crisp</h2>
-
-<span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-<span aria-hidden="true">⭐</span>
-<span aria-hidden="true">⭐</span>
-<span aria-hidden="true">⭐</span>
-<span aria-hidden="true">⭐</span>
-<span aria-hidden="true">☆</span>
-</span>
-
-<p class="description">
-This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.
-</p>
-
-</div>
-</div>
-
-</main>
+<main id="recipeContainer"></main>
 
 <footer>
 
-<a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">
+<a href="https://www.flaticon.com/free-icons/recipe">
 Recipe icons created by Freepik - Flaticon
 </a>
 
 <div class="social">
-<!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
 <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
 <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
 <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
@@ -85,7 +39,7 @@ Recipe icons created by Freepik - Flaticon
 
 </footer>
 
+<script src="script.js"></script>
+
 </body>
 </html>
-
-/* Code written by me, improved upon by ChatGpt. */
