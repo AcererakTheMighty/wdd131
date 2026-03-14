@@ -1,98 +1,87 @@
-const recipes = [
-{
-name: "Apple Crisp",
-tag: "dessert",
-rating: 4,
-description:
-"This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.",
-image: "images/apple_crisp.jpg"
-},
-{
-name: "Chicken Alfredo",
-tag: "dinner",
-rating: 5,
-description: "Creamy pasta with chicken and parmesan cheese.",
-image: "images/chicken_alfredo.jpg"
-},
-{
-name: "Greek Salad",
-tag: "healthy",
-rating: 4,
-description: "Fresh vegetables with feta cheese and olives.",
-image: "images/greek_salad.jpg"
-}
-]
-
 const container = document.getElementById("recipeContainer")
 const searchInput = document.getElementById("searchInput")
 
-function getStars(rating){
-let stars = ""
-for(let i=0;i<5;i++){
-stars += i < rating ? "⭐" : "☆"
+function starRating(rating){
+    let stars = ""
+    const fullStars = Math.floor(rating)
+
+    for(let i=0;i<5;i++){
+        stars += i < fullStars ? "⭐" : "☆"
+    }
+
+    return stars
 }
-return stars
-}
 
-function createRecipeCard(recipe){
+function recipeCard(recipe){
 
-return `
-<div class="recipe-card">
+    return `
+    <div class="recipe-card">
 
-<img src="${recipe.image}" alt="${recipe.name}">
+        <img src="${recipe.image}" alt="${recipe.name}">
 
-<div class="recipe-info">
+        <div class="recipe-info">
 
-<span class="tag">${recipe.tag}</span>
+            <span class="tag">${recipe.tags.join(", ")}</span>
 
-<h2>${recipe.name}</h2>
+            <h2>${recipe.name}</h2>
 
-<span class="rating">${getStars(recipe.rating)}</span>
+            <span class="rating">${starRating(recipe.rating)}</span>
 
-<p class="description">
-${recipe.description}
-</p>
+            <p class="description">
+                ${recipe.description}
+            </p>
 
-</div>
-</div>
-`
+        </div>
+
+    </div>
+    `
 }
 
 function displayRecipes(list){
-container.innerHTML = ""
-list.forEach(recipe=>{
-container.innerHTML += createRecipeCard(recipe)
-})
+    container.innerHTML = ""
+
+    list.forEach(recipe=>{
+        container.innerHTML += recipeCard(recipe)
+    })
 }
 
 function showRandomRecipe(){
-const random = recipes[Math.floor(Math.random()*recipes.length)]
-displayRecipes([random])
+    const randomIndex = Math.floor(Math.random() * recipes.length)
+    displayRecipes([recipes[randomIndex]])
 }
 
 function searchRecipes(keyword){
 
-keyword = keyword.toLowerCase()
+    keyword = keyword.toLowerCase()
 
-const results = recipes.filter(recipe =>
-recipe.name.toLowerCase().includes(keyword) ||
-recipe.description.toLowerCase().includes(keyword) ||
-recipe.tag.toLowerCase().includes(keyword)
-)
+    const filtered = recipes.filter(recipe => {
 
-results.sort((a,b)=>a.name.localeCompare(b.name))
+        const name = recipe.name.toLowerCase()
+        const description = recipe.description.toLowerCase()
+        const tags = recipe.tags.join(" ").toLowerCase()
 
-displayRecipes(results)
+        return (
+            name.includes(keyword) ||
+            description.includes(keyword) ||
+            tags.includes(keyword)
+        )
+    })
+
+    filtered.sort((a,b)=> a.name.localeCompare(b.name))
+
+    displayRecipes(filtered)
 }
 
-searchInput.addEventListener("input",(e)=>{
-const value = e.target.value.trim()
+searchInput.addEventListener("input", (e)=>{
 
-if(value === ""){
-showRandomRecipe()
-}else{
-searchRecipes(value)
-}
+    const value = e.target.value.trim()
+
+    if(value === ""){
+        showRandomRecipe()
+    } else {
+        searchRecipes(value)
+    }
+
 })
 
 showRandomRecipe()
