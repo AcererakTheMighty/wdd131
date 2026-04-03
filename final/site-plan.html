@@ -1,121 +1,23 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Site Plan</title>
-    <link type="text/css" rel="stylesheet" href="site-plan.css">
+  <meta charset="UTF-8">
+  <title>VTM Dice Roller</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <h1>VTM Dice Site Plan</h1>
-        <h2>Landon Smith</h2>
-        <h2>WDD 131-[section]</h2>
-    </header>
+  <div class="container">
+    <h1>VTM Dice Roller</h1>
 
-    <main>
-        <hr>
-        <h2>Overview</h2>
+    <label>Number of Dice:</label>
+    <input type="number" id="diceCount" min="1" max="20" value="5">
 
-        <h3>Purpose</h3>
-        <p>
-            The purpose of this site is to provide a simple and efficient dice rolling tool for the tabletop roleplaying game Vampire: The Masquerade V5. The site allows users to input the number of dice and hunger dice, then simulate a roll using official game mechanics. It calculates successes, identifies critical successes, and detects messy criticals or bestial failures. This tool is intended to streamline gameplay and reduce reliance on physical dice.
-        </p>
+    <button id="rollBtn">Roll Dice</button>
 
-        <h3>Audience</h3>
-        <p>
-            The primary audience for this site is myself and my friends who are currently participating in a Vampire: The Masquerade Chronicle. It is designed for players and storytellers who want a fast and reliable way to roll dice and interpret results, especially during online or hybrid sessions.
-        </p>
+    <div id="results"></div>
+    <div id="summary"></div>
+  </div>
 
-        <h3>Dynamic elements</h3>
-        <p>
-            JavaScript will be used to dynamically simulate dice rolls based on user input. Users will enter the number of total dice and hunger dice, and the script will generate random values for each die. The program will calculate successes (6 or higher), detect critical successes (pairs of 10s), and determine messy criticals or bestial failures depending on hunger dice results. The page updates instantly without reloading and displays results clearly.
-        </p>
-
-        <hr>
-
-        <h2>Branding</h2>
-        <h3>Website Logo</h3>
-        <img src="#" alt="VTM Dice Roller Logo">
-
-        <hr>
-
-        <h2>Style Guide</h2>
-
-        <h3>Color Palette</h3>
-        Palette URL:
-        <a href="https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c" target="_blank">
-            https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c
-        </a>
-
-        <table class="colors">
-            <tr>
-                <th>Primary</th>
-                <th>Secondary</th>
-                <th>Accent 1</th>
-                <th>Accent 2</th>
-            </tr>
-            <tr>
-                <td class="primary">#396E94</td>
-                <td class="secondary">#E7C24F</td>
-                <td class="accent1">#A43312</td>
-                <td class="accent2">#381D2A</td>
-            </tr>
-        </table>
-
-        <h3>Typography</h3>
-        <h4>Heading Font: Cinzel</h4>
-        <h4>Paragraph Font: Arial</h4>
-
-        <p>
-            Cinzel is used for headings to give a gothic and dramatic feel that matches the tone of Vampire: The Masquerade. Arial is used for body text because it is clean, simple, and easy to read across all devices.
-        </p>
-
-        <h3>Normal paragraph example</h3>
-        <p>
-            This site provides a simple interface for rolling dice according to Vampire: The Masquerade V5 rules. Users can input dice values and receive immediate results.
-        </p>
-
-        <h3>Colored paragraph example</h3>
-        <p class="colored">
-            The system highlights successes, criticals, and failures clearly so players can quickly interpret outcomes during gameplay.
-        </p>
-
-        <h3>Navigation</h3>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Dice Rules</a>
-            <a href="#">About</a>
-        </nav>
-
-        <hr>
-
-        <h2>Content</h2>
-
-        <h3>Home page</h3>
-        <p>
-            The home page will feature the main dice rolling tool. Users will input the number of dice and hunger dice, then press a button to roll. The results will display individual dice values, total successes, and whether the result is a critical success, messy critical, or bestial failure. The layout will be simple and centered for easy use during gameplay.
-        </p>
-
-        <h3>Dice Rules Page</h3>
-        <p>
-            This page will explain the mechanics of Vampire: The Masquerade V5 dice rolling. It will describe how successes are counted (6 or higher), how criticals are formed (pairs of 10s), and how hunger dice influence results such as messy criticals and bestial failures. This page helps new players understand the system.
-        </p>
-
-        <h2>Wireframes</h2>
-
-        <h3>Home</h3>
-        <p>
-            The home page will include input fields for total dice and hunger dice at the top, a roll button in the center, and a results section below. Results will display both individual dice and a summary of the outcome.
-        </p>
-        <img src="#" alt="home page wireframe">
-
-        <h3>Dice Rules Page</h3>
-        <p>
-            The rules page will be text-focused with headings and sections explaining the dice system. It may include example rolls to demonstrate criticals and failures.
-        </p>
-        <img src="#" alt="page 2 wireframe">
-
-    </main>
+  <script src="final.js"></script>
 </body>
 </html>

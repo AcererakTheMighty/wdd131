@@ -1,0 +1,47 @@
+body {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: crimson;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: darkred;
+}
+
+#results {
+  margin-top: 15px;
+}
+
+.die {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #333;
+}
+
+.success {
+  border: 2px solid lime;
+}
+
+.failure {
+  border: 2px solid red;
+}
+
+.critical {
+  border: 2px solid gold;
+}
+
+#summary {
+  margin-top: 15px;
+  font-weight: bold;
+}
