@@ -1,6 +1,37 @@
 body {
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #1a1a1a, #333);
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.container {
+  background: #222;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  text-align: center;
+  width: 350px;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+input {
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
 }
 
 button {
@@ -11,6 +42,7 @@ button {
   color: white;
   cursor: pointer;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 button:hover {
@@ -24,9 +56,10 @@ button:hover {
 .die {
   display: inline-block;
   margin: 5px;
-  padding: 10px;
-  border-radius: 5px;
-  background: #333;
+  padding: 12px;
+  border-radius: 6px;
+  background: #444;
+  font-weight: bold;
 }
 
 .success {
@@ -44,4 +77,5 @@ button:hover {
 #summary {
   margin-top: 15px;
   font-weight: bold;
+  font-size: 18px;
 }
